@@ -1,0 +1,104 @@
+body {
+  background: #0d2a2e;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 20px;
+}
+
+.top-left-image {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  top: 40px;
+  left: 10px;
+  box-shadow:-14px 13px 2px #0a1b1d;;
+}
+.login-container {
+  background: #123437;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  width: 320px;
+  color: white;
+}
+
+.login-container h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+  border: none;
+  background: #0d2a2e;
+  color: #ddd;
+  font-size: 16px;
+}
+.input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 25px 15px 15px 45px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+.input-wrapper .icon {
+  position: absolute;
+  left: 10px;
+  top: 40%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 18px;
+  color: #666;
+}
+input::placeholder {
+  color: #666;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.icon {
+    font-size: 24px;      
+    display: inline-block;
+    vertical-align: middle; /* Aligns nicely with text or input fields */
+}
+
+.password {
+    color: #555;           /* Change color of the lock */
+    margin-right: 8px;     /* Space between icon and input */
+}
+
+button:hover {
+  background: #218838;
+}
+
+.footer a {
+    color: #fff;
+    margin: 0 40px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: #28a745;
+}

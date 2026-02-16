@@ -1,0 +1,466 @@
+/* ==========================
+   GLOBAL STYLES
+========================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', Arial, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f2027, #000);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 50px;
+}
+
+/* ==========================
+   BACK TO LOGIN LINK
+========================== */
+.back-link {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 25px;
+  background: linear-gradient(145deg, #00ff99, #00ccff);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 255, 153, 0.4), 0 0 25px rgba(0, 204, 255, 0.2);
+  transition: all 0.3s ease;
+}
+.back-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 255, 153, 0.7), 0 0 50px rgba(0, 204, 255, 0.4);
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1300px;
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  z-index: 1000;
+  margin: 0 auto;
+}
+.navbar .logo {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #00ff99;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.navbar nav a {
+  text-decoration: none;
+  color: #ddd;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.navbar nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #00ff99;
+  transition: width 0.3s ease;
+}
+.navbar nav a:hover {
+  color: #00ff99;
+}
+.navbar nav a:hover::after {
+  width: 100%;
+}
+.navbar .btn {
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  background: linear-gradient(145deg, #00ff99, #00ccff);
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 255, 153, 0.5);
+}
+.navbar .btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 12px rgba(0, 255, 153, 0.5);
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 50px;
+  background: linear-gradient(to right, #0d2a2e, #13403f);
+  width: 100%;
+  max-width: 1300px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 10px 30px rgba(0, 255, 153, 0.3);
+}
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+  padding-right: 20px;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #00ff99;
+}
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+.hero-text .btn-primary {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.hero-text .btn-primary:hover {
+  background-color: #1f7a32;
+}
+.hero-image {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+.hero-image img {
+  max-width: 100%;       /* keeps image within its container */
+  max-height: 400px;     /* limits image height */
+  width: auto;           /* maintains aspect ratio */
+  height: auto;          /* maintains aspect ratio */
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 255, 153, 0.5);
+  object-fit: cover;     /* ensures it fills container nicely */
+}
+
+
+/* ==========================
+   FEATURES SECTION
+========================== */
+.features {
+  padding: 60px 50px;
+  text-align: center;
+  background-color: #111;
+  width: 100%;
+  max-width: 1300px;
+  border-radius: 15px;
+  margin-top: 30px;
+}
+.features h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #00ff99;
+}
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+.feature-card {
+  background-color: #1c1c1c;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 255, 153, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #00ff99;
+}
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #ccc;
+}
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 14px 35px rgba(0, 255, 153, 0.5);
+}
+
+/* ==========================
+   DASHBOARD CONTAINER
+========================== */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 1300px;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Move calculator to first position */
+.calculator {
+  order: -1; /* negative order moves it to the left */
+}
+
+
+
+/* --------------------------
+   Sidebar
+-------------------------- */
+.sidebar {
+  flex: 0 0 220px;
+}
+.sidebar h3 {
+  color: #00ff99;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.sidebar a {
+  display: block;
+  margin: 12px 0;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  background: linear-gradient(145deg, #111, #222);
+  box-shadow: 0 4px 12px rgba(0, 255, 153, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.sidebar a:hover {
+  background: linear-gradient(145deg, #00ff99, #00ccff);
+  color: #000;
+  transform: translateX(5px);
+  box-shadow: 0 6px 18px rgba(0, 255, 153, 0.5);
+}
+
+/* --------------------------
+   Form Content
+-------------------------- */
+.content {
+  flex: 1;
+  min-width: 320px;
+  background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+  padding: 40px 50px;
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(0, 255, 153, 0.5), 0 0 60px rgba(0, 204, 255, 0.2);
+  border: 1px solid rgba(0, 255, 153, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.content h2 {
+  color: #00ff99;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 25px;
+  text-shadow: 0 0 15px rgba(0, 255, 153, 0.7);
+  letter-spacing: 1px;
+}
+.content input {
+  padding: 15px 20px;
+  border-radius: 15px;
+  border: 1px solid #00ff99;
+  background: #111;
+  color: #00ff99;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: inset 0 0 10px rgba(0, 255, 153, 0.3);
+  transition: all 0.3s ease;
+}
+.content input:focus {
+  outline: none;
+  border-color: #00ccff;
+  box-shadow: 0 0 15px rgba(0, 255, 153, 0.9);
+}
+.content input + input {
+  margin-top: 15px;
+}
+.content button {
+  padding: 15px 30px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: linear-gradient(145deg, #00ff99, #00ccff);
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 255, 153, 0.4);
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+.content button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 255, 153, 0.7), 0 0 50px rgba(0, 204, 255, 0.4);
+}
+.content button:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 0 15px rgba(0, 255, 153, 0.5);
+}
+
+/* --------------------------
+   Table Area
+-------------------------- */
+.table-area {
+  flex: 1.2;
+  min-width: 400px;
+  width: 100%;
+  margin: 30px auto;
+  overflow-x: auto;
+}
+.table-area table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  font-family: 'Orbitron', Arial, sans-serif;
+  color: #fff;
+}
+.table-area th, .table-area td {
+  padding: 18px 25px;
+  text-align: center;
+}
+.table-area th {
+  background: linear-gradient(135deg, #00ff99, #00ccff);
+  color: #000;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 4px 12px rgba(0, 255, 153, 0.2);
+}
+.table-area td {
+  background: #111;
+  color: #00ff99;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 255, 153, 0.2);
+}
+.table-area tbody tr:hover {
+  background: rgba(0, 255, 153, 0.15);
+  transform: translateX(3px);
+  transition: all 0.3s ease;
+}
+
+/* ==========================
+   CALCULATOR
+========================== */
+.calculator {
+  flex: 0 0 320px;
+  background: linear-gradient(145deg, #0a0a0a, #151515);
+  padding: 25px;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 0 20px rgba(0, 255, 153, 0.3),
+              0 0 60px rgba(0, 204, 255, 0.15);
+  border: 1px solid rgba(0, 255, 153, 0.3);
+  margin: 30px 0;
+  animation: glow 3s infinite;
+}
+#display {
+  width: 100%;
+  height: 65px;
+  font-size: 2.2rem;
+  text-align: right;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  background: #000;
+  color: #00ff99;
+  text-shadow: 0 0 10px rgba(0, 255, 153, 0.7);
+  box-shadow: inset 0 0 15px rgba(0, 255, 153, 0.3);
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+button {
+  height: 58px;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+button:active { transform: scale(0.92); }
+.number { background: linear-gradient(145deg, #1c1c1c, #101010); color: #fff; }
+.number:hover { box-shadow: 0 0 12px rgba(255, 255, 255, 0.15); }
+.operator { background: linear-gradient(145deg, #00ccff, #0077ff); color: #000; font-weight: bold; }
+.operator:hover { box-shadow: 0 0 20px rgba(0, 204, 255, 0.9); }
+.equal { grid-row: span 2; background: linear-gradient(145deg, #00ff99, #00cc66); color: #000; font-weight: bold; }
+.equal:hover { box-shadow: 0 0 30px rgba(0, 255, 153, 1); }
+.clear { background: linear-gradient(145deg, #ff4d4d, #cc0000); color: #fff; }
+.clear:hover { box-shadow: 0 0 25px rgba(255, 77, 77, 1); }
+.zero { grid-column: span 2; }
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(0, 255, 153, 0.4); }
+  50% { box-shadow: 0 0 25px rgba(0, 255, 153, 0.8); }
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media (max-width: 900px) {
+  .hero { flex-direction: column; text-align: center; padding: 40px 20px; }
+  .hero-text { padding-right: 0; margin-bottom: 30px; }
+}
+@media (max-width: 768px) {
+  .navbar { flex-direction: column; gap: 12px; padding: 10px 20px; }
+  .navbar nav { justify-content: center; flex-wrap: wrap; }
+  .container { flex-direction: column; align-items: center; }
+  .sidebar, .content, .table-area, .calculator { flex: 1 1 100%; }
+}
+@media (max-width: 600px) {
+  .content { padding: 25px; width: 90%; }
+  .content h2 { font-size: 1.8rem; }
+  .content input, .content button { font-size: 1rem; padding: 12px 18px; }
+  .table-area th, .table-area td { padding: 12px 15px; }
+}
+.page {
+  display: flex;             /* use flexbox */
+  flex-direction: column;    /* stack content vertically */
+  justify-content: center;   /* vertical centering */
+  align-items: center;       /* horizontal centering */
+  text-align: center;        /* center text */
+  height: 100%;              /* optional: fill parent height */
+  gap: 15px;                 /* space between h2 and p */
+}

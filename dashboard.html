@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GamePro | Gaming Website</title>
+  <link rel="stylesheet" href="style2.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</head>
+<body>
+
+  <!-- BACK TO LOGIN LINK -->
+  <a href="index.html" class="back-link">Go back to Login</a>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">GamePro</div>
+    <nav>
+      <a href="https://www.dota2.com/heroes" target="_blank">Heroes</a>
+      <a href="https://www.dota2.com/news" target="_blank">News</a>
+      <a href="https://www.dota2.com/esports/ti14/schedule" target="_blank">Esports</a>
+      <a href="https://www.dota2.com/hero/monkeyking" class="btn" target="_blank">Story</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Monkey King's Journey</h1>
+      <p>I've outwitted gods. Smashing a glowing rock should be no problem. I should have known a weapon worthy of my talents wouldn't be found in an armory.</p>
+      <a href="https://store.steampowered.com/app/570/Dota_2/" target="_blank">
+  <button class="btn btn-primary">Play Now</button>
+</a>
+
+    </div>
+    <div class="hero-image">
+      <img src="18v9x8.webp" alt="Gamer Illustration" width="1000" height="1000">
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features">
+  <h2>Our Features</h2>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <h3>
+        <a href="https://www.dota2.com/home" target="_blank" class="feature-link">
+          🎉 New Events
+        </a>
+      </h3>
+      <p>Daily tournaments and challenges.</p>
+    </div>
+    <div class="feature-card">
+      <h3>
+        <a href="https://www.dota2.com/home" target="_blank" class="feature-link">
+          📱 Any Device
+        </a>
+      </h3>
+      <p>Mobile and desktop support for all users.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <h3>Menu</h3>
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('contact')">Contact</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('help')">Help</a>
+      <a onclick="exitSystem()">Exit</a>
+    </aside>
+
+    <!-- CENTER CONTENT -->
+    <main class="content">
+
+      <!-- PERSON FORM -->
+      <div id="home" class="page">
+        <h2>Person Information</h2>
+        <input id="fname" placeholder="First Name">
+        <input id="mname" placeholder="Middle Name">
+        <input id="lname" placeholder="Last Name">
+        <input id="age" type="number" placeholder="Age">
+        <input id="gmail" placeholder="Gmail">
+        <button onclick="savePerson()">Save 🔒</button>
+      </div>
+
+      <div id="contact" class="page hidden">
+        <h2>Contact</h2>
+        <p>Email: calebdeguzmangomez23@gmail.com</p>
+      </div>
+
+      <div id="about" class="page hidden">
+        <h2>About</h2>
+        <p>Simple web system for our finals.</p>
+      </div>
+
+      <div id="help" class="page hidden">
+        <h2>Help</h2>
+        <p>Fill out the form and click Save.</p>
+      </div>
+
+    </main>
+
+    <!-- RIGHT TABLE -->
+    <section class="table-area">
+      <h2>Personal Data</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>FIRST NAME</th>
+            <th>MIDDLE NAME</th>
+            <th>LAST NAME</th>
+            <th>AGE</th>
+            <th>GMAIL</th>
+          </tr>
+        </thead>
+        <tbody id="tableData"></tbody>
+      </table>
+    </section>
+
+    <!-- CALCULATOR -->
+    <aside class="calculator">
+      <input type="text" id="display" readonly>
+      <div class="buttons">
+        <button class="clear">C</button>
+        <button class="operator">/</button>
+        <button class="operator">*</button>
+        <button class="operator">-</button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator">+</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="equal">=</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="number zero">0</button>
+        <button class="number">.</button>
+      </div>
+    </aside>
+
+  </div> <!-- end container -->
+
+</body>
+</html>
